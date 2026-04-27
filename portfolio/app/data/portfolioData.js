@@ -92,8 +92,8 @@ export const projects = [
     stack: ["React", "Node.js", "OpenAI API", "Razorpay", "PDF Generation"],
     featured: true,
     links: {
-      demo: "#",
-      github: "#",
+      demo: "https://ghcvaluation.vercel.app/",
+      github: "https://github.com/jazzirHussain/AI-Business-Valuation-Product",
       video: "#"
     }
   },
