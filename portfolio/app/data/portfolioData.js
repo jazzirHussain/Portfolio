@@ -162,7 +162,7 @@ export const projects = [
     ],
     stack: ["React", "Node.js", "Razorpay", "MongoDB"],
     links: {
-      github: "#",
+      github: "https://github.com/jazzirHussain/E-Commerce-Platform",
       video: "#"
     }
   }
