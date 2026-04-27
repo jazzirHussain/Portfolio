@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jazzir Hussain | Full Stack Engineer Portfolio | React, Node.js, AWS</title>
+
+  <meta name="description"
+    content="Full Stack Engineer building end-to-end production systems — React, Node.js, AWS, AI integrations. Built apps with 600+ daily users. Open to opportunities in Germany.">
+
+  <meta name="keywords"
+    content="Full Stack Developer, React Developer, Node.js, AWS, Portfolio, Software Engineer, Germany Jobs, JavaScript Developer, SaaS, IoT">
+
+  <meta name="author" content="Jazzir Hussain">
+  <!-- Open Graph (for LinkedIn, WhatsApp previews) -->
+  <meta property="og:title" content="Jazzir Hussain | Full Stack Engineer">
+  <meta property="og:description"
+    content="I build production-ready systems end-to-end. 600+ DAU apps. Open to Germany roles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jazzirhussain.com">
+  <meta property="og:image" content="https://jazzirhussain.com/preview.png">
+
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jazzir Hussain | Full Stack Engineer">
+  <meta name="twitter:description" content="Full stack engineer shipping real products.">
+  <meta name="twitter:image" content="https://jazzirhussain.com/preview.png">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jazzir Hussain",
+  "url": "https://yourdomain.com",
+  "jobTitle": "Full Stack Engineer",
+  "sameAs": [
+    "https://linkedin.com/in/jazzirhussain",
+    "https://github.com/jazzirhussain"
+  ],
+  "knowsAbout": [
+    "React",
+    "Node.js",
+    "AWS",
+    "Full Stack Development",
+    "IoT",
+    "AI Integration"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "TCS"
+  }
+}
+</script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #090909;
+      --bg2: #0f0f0f;
+      --bg3: #141414;
+      --border: #1e1e1e;
+      --border2: #2a2a2a;
+      --text: #f0ede8;
+      --muted: #666;
+      --muted2: #444;
+      --accent: #e8c97a;
+      --accent2: #c9a84c;
+      --green: #4caf84;
+      --blue: #5b9bd5;
+      --red: #e06060;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(9, 9, 9, 0.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: -0.3px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    .nav-links .btn-primary {
+      color: black;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(232, 201, 122, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232, 201, 122, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(232, 201, 122, 0.08);
+      border: 1px solid rgba(232, 201, 122, 0.2);
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      width: fit-content;
+    }
+
+    .hero-tag::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.3;
+      }
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(42px, 7vw, 80px);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+      max-width: 800px;
+    }
+
+    .hero h1 .line2 {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .hero-sub strong {
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #000;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: #f0d98a;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border2);
+      color: var(--muted);
+      font-size: 13px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--muted2);
+      color: var(--text);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 72px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -1px;
+    }
+
+    .stat-num span {
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+      letter-spacing: 0.5px;
+    }
+
+    /* SECTION */
+    section {
+      padding: 100px 48px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-tag {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 500px;
+      line-height: 1.8;
+      margin-bottom: 56px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .skill-cell {
+      background: var(--bg2);
+      padding: 24px;
+      transition: background 0.2s;
+    }
+
+    .skill-cell:hover {
+      background: var(--bg3);
+    }
+
+    .skill-icon {
+      font-size: 22px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .skill-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .skill-tag {
+      font-size: 11px;
+      color: var(--muted);
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.3px;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+      cursor: default;
+    }
+
+    .project-card:hover {
+      border-color: var(--border2);
+      transform: translateY(-2px);
+    }
+
+    .project-card.featured {
+      border-color: rgba(232, 201, 122, 0.25);
+      background: linear-gradient(135deg, #0f0e08, #0f0f0f);
+    }
+
+    .project-card.featured::before {
+      content: 'FEATURED';
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--accent2);
+      background: rgba(232, 201, 122, 0.1);
+      border: 1px solid rgba(232, 201, 122, 0.2);
+      padding: 3px 8px;
+      border-radius: 100px;
+    }
+
+    .project-type {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .project-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .project-highlights {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .project-highlights li {
+      font-size: 12.5px;
+      color: #888;
+      padding: 4px 0;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .project-highlights li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent2);
+      font-size: 10px;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .stack-badge {
+      font-size: 11px;
+      color: var(--blue);
+      background: rgba(91, 155, 213, 0.08);
+      border: 1px solid rgba(91, 155, 213, 0.15);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* EXPERIENCE */
+    .exp-list {
+      max-width: 720px;
+    }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 32px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-item:last-child {
+      border-bottom: none;
+    }
+
+    .exp-period {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.3px;
+      padding-top: 3px;
+      line-height: 1.6;
+    }
+
+    .exp-role {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .exp-company {
+      font-size: 13px;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .exp-desc {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* STACK OVERVIEW */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .stack-item {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+
+    .stack-item:hover {
+      border-color: var(--border2);
+    }
+
+    .stack-item-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .stack-item-cat {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+    .contact-wrap {
+      max-width: 600px;
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-line:last-child {
+      border-bottom: none;
+    }
+
+    .contact-label {
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      width: 100px;
+      flex-shrink: 0;
+    }
+
+    .contact-val {
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .contact-val a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 48px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .footer-logo span {
+      color: var(--accent);
+    }
+
+    /* TICKER */
+    .ticker-wrap {
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      margin-bottom: 0;
+    }
+
+    .ticker {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: ticker 30s linear infinite;
+      white-space: nowrap;
+    }
+
+    .ticker span {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+
+    .ticker span:not(:nth-child(2n)) {
+      color: var(--text);
+    }
+
+    @keyframes ticker {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .skill-layer-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--accent2);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      font-family: 'Syne', sans-serif;
+    }
+
+    /* USER BADGE */
+    .user-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(76, 175, 132, 0.1);
+      border: 1px solid rgba(76, 175, 132, 0.2);
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    .user-badge::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+
+    /* NYON BADGE */
+    .nyon-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(232, 201, 122, 0.08);
+      border: 1px solid rgba(232, 201, 122, 0.2);
+      color: var(--accent2);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    /* PROJECT LINKS */
+    .project-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .proj-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      border: 1px solid var(--border2);
+      color: var(--muted);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      letter-spacing: 0.3px;
+    }
+
+    .proj-link:hover {
+      color: var(--text);
+      border-color: #444;
+      background: var(--bg3);
+    }
+
+    .proj-link.playstore {
+      border-color: rgba(76, 175, 132, 0.3);
+      color: #4caf84;
+    }
+
+    .proj-link.playstore:hover {
+      background: rgba(76, 175, 132, 0.08);
+      border-color: rgba(76, 175, 132, 0.5);
+    }
+
+    .proj-link.github {
+      border-color: rgba(255, 255, 255, 0.15);
+      color: #ccc;
+    }
+
+    .proj-link.github:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .proj-link.video {
+      border-color: rgba(224, 96, 96, 0.3);
+      color: #e06060;
+    }
+
+    .proj-link.video:hover {
+      background: rgba(224, 96, 96, 0.08);
+      border-color: rgba(224, 96, 96, 0.5);
+    }
+
+    .proj-link.demo {
+      border-color: rgba(91, 155, 213, 0.3);
+      color: #5b9bd5;
+    }
+
+    .proj-link.demo:hover {
+      background: rgba(91, 155, 213, 0.08);
+      border-color: rgba(91, 155, 213, 0.5);
+    }
+
+    .proj-link svg {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+    }
+
+    /* CASE STUDIES */
+    .case-study {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      transition: border-color 0.2s;
+    }
+
+    .case-study:hover {
+      border-color: var(--border2);
+    }
+
+    .case-study.reverse {
+      direction: rtl;
+    }
+
+    .case-study.reverse>* {
+      direction: ltr;
+    }
+
+    .case-media {
+      background: var(--bg3);
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case-media-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted2);
+      width: 100%;
+    }
+
+    .case-media-placeholder img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      /* height: 36px; */
+      /* opacity: 0.4; */
+    }
+
+    .case-media-placeholder p {
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      opacity: 0.5;
+    }
+
+    .case-screenshot {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .case-body {
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .case-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--muted2);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .case-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .case-desc {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .case-metrics {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+
+    .case-metric-val {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .case-metric-label {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    @media (max-width: 768px) {
+
+      .case-study,
+      .case-study.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+
+      .case-media {
+        min-height: 200px;
+      }
+    }
+
+    /* SKILL COLORS */
+    .skill-cell.skill-blue {
+      border-top: 2px solid #5b9bd5;
+    }
+
+    .skill-cell.skill-green {
+      border-top: 2px solid #4caf84;
+    }
+
+    .skill-cell.skill-amber {
+      border-top: 2px solid #c9a84c;
+    }
+
+    .skill-cell.skill-purple {
+      border-top: 2px solid #8b7fd4;
+    }
+
+    .skill-cell.skill-teal {
+      border-top: 2px solid #3ab8a0;
+    }
+
+    .skill-cell.skill-coral {
+      border-top: 2px solid #d47a6a;
+    }
+
+    .skill-cell.skill-blue .skill-layer-label {
+      color: #5b9bd5;
+    }
+
+    .skill-cell.skill-green .skill-layer-label {
+      color: #4caf84;
+    }
+
+    .skill-cell.skill-amber .skill-layer-label {
+      color: #c9a84c;
+    }
+
+    .skill-cell.skill-purple .skill-layer-label {
+      color: #8b7fd4;
+    }
+
+    .skill-cell.skill-teal .skill-layer-label {
+      color: #3ab8a0;
+    }
+
+    .skill-cell.skill-coral .skill-layer-label {
+      color: #d47a6a;
+    }
+
+    .skill-cell.skill-blue .skill-name {
+      color: #7ab5e8;
+    }
+
+    .skill-cell.skill-green .skill-name {
+      color: #6dcaa0;
+    }
+
+    .skill-cell.skill-amber .skill-name {
+      color: #e0c070;
+    }
+
+    .skill-cell.skill-purple .skill-name {
+      color: #a99de0;
+    }
+
+    .skill-cell.skill-teal .skill-name {
+      color: #5acfba;
+    }
+
+    .skill-cell.skill-coral .skill-name {
+      color: #e09585;
+    }
+
+    .st-blue {
+      color: #5b9bd5 !important;
+      background: rgba(91, 155, 213, 0.08) !important;
+      border-color: rgba(91, 155, 213, 0.2) !important;
+    }
+
+    .st-green {
+      color: #4caf84 !important;
+      background: rgba(76, 175, 132, 0.08) !important;
+      border-color: rgba(76, 175, 132, 0.2) !important;
+    }
+
+    .st-amber {
+      color: #c9a84c !important;
+      background: rgba(201, 168, 76, 0.08) !important;
+      border-color: rgba(201, 168, 76, 0.2) !important;
+    }
+
+    .st-purple {
+      color: #8b7fd4 !important;
+      background: rgba(139, 127, 212, 0.08) !important;
+      border-color: rgba(139, 127, 212, 0.2) !important;
+    }
+
+    .st-teal {
+      color: #3ab8a0 !important;
+      background: rgba(58, 184, 160, 0.08) !important;
+      border-color: rgba(58, 184, 160, 0.2) !important;
+    }
+
+    .st-coral {
+      color: #d47a6a !important;
+      background: rgba(212, 122, 106, 0.08) !important;
+      border-color: rgba(212, 122, 106, 0.2) !important;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 100px 20px 60px;
+      }
+
+      section {
+        padding: 72px 20px;
+      }
+
+      .exp-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .hero-stats {
+        gap: 32px;
+      }
+
+      footer {
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <p style="display:none;">
+    Jazzir Hussain is a full stack engineer specializing in React, Node.js, AWS, and scalable production systems. He has
+    built SaaS platforms, mobile apps, and IoT systems with hundreds of daily active users and is open to software
+    engineering roles in Germany.
+  </p>
+
+  <nav>
+    <a class="nav-logo" href="#"><span>J</span>azzir Hussain</a>
+    <ul class="nav-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <a href="Jazzir_Hussain_Resume_Bangalore.pdf" target="_blank" class="btn-primary">Resume ↓</a>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid"></div>
+    <div class="hero-tag">Available for opportunities · Open to Germany</div>
+    <h1>
+      Full Stack Engineer<br>
+      <span class="line2">End to End.</span>
+    </h1>
+    <p class="hero-sub">
+      I build things that actually ship — from <strong>figma to production</strong>, from <strong>frontend to cloud
+        infra</strong>. Self-taught engineer who co-founded a dev studio, led a team of 5, and shipped products with
+      <strong>600+ daily active users</strong>.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View Projects →</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">600<span>+</span></div>
+        <div class="stat-label">Daily active users</div>
+      </div>
+      <div>
+        <div class="stat-num">8<span>+</span></div>
+        <div class="stat-label">Production projects</div>
+      </div>
+      <div>
+        <div class="stat-num">5</div>
+        <div class="stat-label">Person team led</div>
+      </div>
+      <div>
+        <div class="stat-num">1</div>
+        <div class="stat-label">App on Play Store</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-tag fade-in">What I bring</div>
+    <h2 class="section-title fade-in">End to end.<br>No hand-offs.</h2>
+    <p class="section-sub fade-in">Most developers own one layer. I own the whole stack — UI, business logic, cloud
+      infra, payments, IoT, AI integrations, and post-deployment monitoring.</p>
+
+    <!-- Stack belt — scrolling ticker -->
+    <div class="ticker-wrap fade-in">
+      <div class="ticker">
+        <span>React</span><span>·</span>
+        <span>Next.js</span><span>·</span>
+        <span>TypeScript</span><span>·</span>
+        <span>Node.js</span><span>·</span>
+        <span>React Native</span><span>·</span>
+        <span>AWS EC2</span><span>·</span>
+        <span>Lambda</span><span>·</span>
+        <span>S3</span><span>·</span>
+        <span>CloudFront</span><span>·</span>
+        <span>Nginx</span><span>·</span>
+        <span>Firebase</span><span>·</span>
+        <span>PostgreSQL</span><span>·</span>
+        <span>MongoDB</span><span>·</span>
+        <span>MQTT</span><span>·</span>
+        <span>OpenAI API</span><span>·</span>
+        <span>Razorpay</span><span>·</span>
+        <span>RFID</span><span>·</span>
+        <span>PL/SQL</span><span>·</span>
+        <span>Docker</span><span>·</span>
+        <span>Figma</span><span>·</span>
+        <!-- duplicate for seamless loop -->
+        <span>React</span><span>·</span>
+        <span>Next.js</span><span>·</span>
+        <span>TypeScript</span><span>·</span>
+        <span>Node.js</span><span>·</span>
+        <span>React Native</span><span>·</span>
+        <span>AWS EC2</span><span>·</span>
+        <span>Lambda</span><span>·</span>
+        <span>S3</span><span>·</span>
+        <span>CloudFront</span><span>·</span>
+        <span>Nginx</span><span>·</span>
+        <span>Firebase</span><span>·</span>
+        <span>PostgreSQL</span><span>·</span>
+        <span>MongoDB</span><span>·</span>
+        <span>MQTT</span><span>·</span>
+        <span>OpenAI API</span><span>·</span>
+        <span>Razorpay</span><span>·</span>
+        <span>RFID</span><span>·</span>
+        <span>PL/SQL</span><span>·</span>
+        <span>Docker</span><span>·</span>
+        <span>Figma</span><span>·</span>
+      </div>
+    </div>
+
+    <div class="skills-grid fade-in" style="margin-top:40px;">
+      <div class="skill-cell skill-blue">
+        <div class="skill-layer-label">Layer 01</div>
+        <div class="skill-name">Frontend</div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Pixel-perfect UIs from Figma to live.
+          Responsive, fast, accessible.</p>
+        <div class="skill-tags">
+          <span class="skill-tag st-blue">React</span>
+          <span class="skill-tag st-blue">Next.js</span>
+          <span class="skill-tag st-blue">TypeScript</span>
+          <span class="skill-tag st-blue">Tailwind</span>
+          <span class="skill-tag st-blue">Figma → Code</span>
+        </div>
+      </div>
+
+      <div class="skill-cell skill-green">
+        <div class="skill-layer-label">Layer 02</div>
+        <div class="skill-name">Backend & APIs</div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">REST APIs, microservices, real-time systems,
+          government API integrations.</p>
+        <div class="skill-tags">
+          <span class="skill-tag st-green">Node.js</span>
+          <span class="skill-tag st-green">Express</span>
+          <span class="skill-tag st-green">Firebase Functions</span>
+          <span class="skill-tag st-green">MQTT</span>
+          <span class="skill-tag st-green">Microservices</span>
+        </div>
+      </div>
+
+      <div class="skill-cell skill-amber">
+        <div class="skill-layer-label">Layer 03</div>
+        <div class="skill-name">Cloud & DevOps</div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Deploy and maintain real production
+          infrastructure. Not just "push to Vercel."</p>
+        <div class="skill-tags">
+          <span class="skill-tag st-amber">AWS EC2</span>
+          <span class="skill-tag st-amber">Lambda</span>
+          <span class="skill-tag st-amber">S3</span>
+          <span class="skill-tag st-amber">CloudFront</span>
+          <span class="skill-tag st-amber">Nginx</span>
+        </div>
+      </div>
+
+      <div class="skill-cell skill-purple">
+        <div class="skill-layer-label">Layer 04</div>
+        <div class="skill-name">Mobile</div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Cross-platform apps deployed to production.
+          Live on the Play Store.</p>
+        <div class="skill-tags">
+          <span class="skill-tag st-purple">React Native</span>
+          <span class="skill-tag st-purple">Expo</span>
+          <span class="skill-tag st-purple">Play Store</span>
+          <span class="skill-tag st-purple">Push Notifications</span>
+        </div>
+      </div>
+
+      <div class="skill-cell skill-teal">
+        <div class="skill-layer-label">Layer 05</div>
+        <div class="skill-name">Databases</div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Schema design, time-series data, real-time
+          sync, enterprise PL/SQL.</p>
+        <div class="skill-tags">
+          <span class="skill-tag st-teal">PostgreSQL</span>
+          <span class="skill-tag st-teal">Firestore</span>
+          <span class="skill-tag st-teal">MongoDB</span>
+          <span class="skill-tag st-teal">PL/SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-cell skill-coral">
+        <div class="skill-layer-label">Layer 06</div>
+        <div class="skill-name">Integrations</div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Payments, AI, IoT, government APIs — I've wired
+          them all into production.</p>
+        <div class="skill-tags">
+          <span class="skill-tag st-coral">OpenAI API</span>
+          <span class="skill-tag st-coral">Razorpay</span>
+          <span class="skill-tag st-coral">Govt e-Invoice API</span>
+          <span class="skill-tag st-coral">RFID</span>
+          <span class="skill-tag st-coral">IoT / MQTT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-tag fade-in">What I've built</div>
+    <h2 class="section-title fade-in">Real products.<br>Real users.</h2>
+    <p class="section-sub fade-in">Not tutorials. Not side projects that never shipped. These are production systems
+      used by actual businesses and real people.</p>
+
+    <div class="projects-grid">
+
+      <div class="project-card featured fade-in">
+        <div class="project-type">Mobile · Android · Real-time</div>
+        <div class="project-title">Construction Management App</div>
+        <div class="project-desc">End-to-end mobile platform for tracking construction project progress, live on the
+          Play Store.</div>
+        <ul class="project-highlights">
+          <li>Real-time camera streaming from job sites</li>
+          <li>Budget tracking and financial overview</li>
+          <li>Activity feed with live updates</li>
+          <li>Gallery management and documentation</li>
+          <li>Deployed and live on Google Play Store</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-badge">React Native</span>
+          <span class="stack-badge">Firebase</span>
+          <span class="stack-badge">Real-time Streaming</span>
+          <span class="stack-badge">Play Store</span>
+        </div>
+        <div class="project-links">
+          <a href="https://play.google.com/store/apps/details?id=com.riolivings.app.twa&pcampaignid=web_share"
+            target="_blank" class="proj-link playstore">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3.18 23.76c.37.2.8.2 1.18 0L16.62 12 4.36.24C3.98.04 3.55.04 3.18.24A1.3 1.3 0 002.5 1.4v21.2c0 .52.28.98.68 1.16z" />
+              <path d="M20.3 9.93l-2.8-1.6-3.2 3.67 3.2 3.67 2.82-1.62A2.14 2.14 0 0020.3 9.93z" />
+              <path d="M4.36.24L16.1 10.57l-2.9 3.35L4.36.24z" opacity=".5" />
+              <path d="M4.36 23.76l8.84-9.68-2.9-3.35L4.36 23.76z" opacity=".5" />
+            </svg>
+            Play Store
+          </a>
+          <a href="#" class="proj-link github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.82.57A12 12 0 0012 .3z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Demo Video
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card featured fade-in">
+        <div class="project-type">SaaS · Multi-tenant · AI · Payments</div>
+        <div class="project-title">AI Business Valuation Tool</div>
+        <div class="user-badge">100+ daily active users</div>
+        <div class="project-desc">Generates detailed company valuation reports using AI — applying DCF, Berkus, and
+          Venture Capital methods automatically. Live with paying customers.</div>
+        <ul class="project-highlights">
+          <li>Integrated OpenAI API for AI-powered analysis</li>
+          <li>Multiple valuation methodologies (DCF, Berkus, VC)</li>
+          <li>Razorpay payment gateway — real paying users</li>
+          <li>Detailed PDF report generation</li>
+          <li>Business metrics input and processing</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-badge">React</span>
+          <span class="stack-badge">Node.js</span>
+          <span class="stack-badge">OpenAI API</span>
+          <span class="stack-badge">Razorpay</span>
+          <span class="stack-badge">PDF Generation</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-link demo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+            </svg>
+            Live Site
+          </a>
+          <a href="#" class="proj-link github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.82.57A12 12 0 0012 .3z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Demo Video
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card featured fade-in">
+        <div class="project-type">Enterprise · Multi-branch · RFID</div>
+        <div class="project-title">School Management Platform</div>
+        <div class="user-badge">500+ daily active users</div>
+        <div class="project-desc">Full-scale school ERP with complex scheduling, RFID attendance, payroll, and
+          multi-branch support.</div>
+        <ul class="project-highlights">
+          <li>RFID-based student attendance system</li>
+          <li>Complex slot booking and rescheduling engine</li>
+          <li>Staff payroll and management</li>
+          <li>Multi-branch, multi-role access control</li>
+          <li>Project tracking with submission review rounds</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-badge">React</span>
+          <span class="stack-badge">Node.js</span>
+          <span class="stack-badge">RFID</span>
+          <span class="stack-badge">PostgreSQL</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-link github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.82.57A12 12 0 0012 .3z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Demo Video
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-type">IoT · Analytics · AWS</div>
+        <div class="project-title">IoT Analytics Dashboard</div>
+        <div class="project-desc">Real-time analytics platform where users register IoT devices that stream time-series
+          data for visualization.</div>
+        <ul class="project-highlights">
+          <li>MQTT broker for device communication</li>
+          <li>Time-series data processing and storage</li>
+          <li>Real-time graphs and insights</li>
+          <li>Full AWS deployment — EC2, CloudFront</li>
+          <li>Device onboarding and management</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-badge">MQTT</span>
+          <span class="stack-badge">AWS EC2</span>
+          <span class="stack-badge">CloudFront</span>
+          <span class="stack-badge">Time-series DB</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-link github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.82.57A12 12 0 0012 .3z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Demo Video
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-type">SaaS · Govt API · Automation</div>
+        <div class="project-title">Billing Automation Software</div>
+        <div class="project-desc">Eliminates double-entry for plywood manufacturers by generating e-Invoice and
+          e-Waybill simultaneously from a single form.</div>
+        <ul class="project-highlights">
+          <li>Integrated official Government e-Invoice API</li>
+          <li>e-Waybill generation in same workflow</li>
+          <li>Reduced billing time from 20 mins to under 2</li>
+          <li>PDF report download for both documents</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-badge">React</span>
+          <span class="stack-badge">Govt API</span>
+          <span class="stack-badge">Node.js</span>
+          <span class="stack-badge">PDF</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-link github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.82.57A12 12 0 0012 .3z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Demo Video
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-type">E-commerce · Full stack</div>
+        <div class="project-title">E-Commerce Platform</div>
+        <div class="project-desc">Full-featured e-commerce platform with product management, cart, checkout, and payment
+          integration.</div>
+        <ul class="project-highlights">
+          <li>Product catalog and inventory management</li>
+          <li>Cart and checkout flow</li>
+          <li>Payment gateway integration</li>
+          <li>Order management and tracking</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-badge">React</span>
+          <span class="stack-badge">Node.js</span>
+          <span class="stack-badge">Razorpay</span>
+          <span class="stack-badge">MongoDB</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-link github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.82.57A12 12 0 0012 .3z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Demo Video
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="case-studies">
+    <div class="section-tag fade-in">Deep dives</div>
+    <h2 class="section-title fade-in">Case studies.</h2>
+    <p class="section-sub fade-in">Behind the numbers — what was built, why it was hard, and what it proved.</p>
+
+    <!-- Case 1: School Platform -->
+    <div class="case-study fade-in">
+      <div class="case-media">
+        <div class="case-media-placeholder">
+          <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <p>Add screenshot here</p> -->
+          <img src="athens.png" alt="Athens">
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-num">Case Study 01</div>
+        <div class="case-title">School Management Platform</div>
+        <div class="case-metrics">
+          <div>
+            <div class="case-metric-val">500+</div>
+            <div class="case-metric-label">Daily active users</div>
+          </div>
+          <div>
+            <div class="case-metric-val">5+</div>
+            <div class="case-metric-label">Branches managed</div>
+          </div>
+        </div>
+        <div class="case-desc">A school needed to manage students, staff, attendance, payroll, and project submissions
+          across multiple branches — all in one platform. The hard part was the RFID attendance system and the complex
+          slot-booking engine that handles rescheduling across branches and roles without conflicts.</div>
+        <div class="project-links" style="border-top:none; padding-top:0; margin-top:0;">
+          <a href="#" class="proj-link github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.82.57A12 12 0 0012 .3z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Watch Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 2: AI Valuation -->
+    <div class="case-study reverse fade-in">
+      <div class="case-media">
+        <div class="case-media-placeholder">
+          <img src="ghc.png" alt="GHC">
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-num">Case Study 02</div>
+        <div class="case-title">AI Business Valuation Tool</div>
+        <div class="case-metrics">
+          <div>
+            <div class="case-metric-val">100+</div>
+            <div class="case-metric-label">Daily active users</div>
+          </div>
+          <div>
+            <div class="case-metric-val">3</div>
+            <div class="case-metric-label">Valuation methods</div>
+          </div>
+        </div>
+        <div class="case-desc">Built a SaaS product from scratch — users input business financials and the app generates
+          a full valuation report using DCF, Berkus, and Venture Capital methods powered by OpenAI. Integrated Razorpay
+          for payments, making this a live commercial product with real paying customers.</div>
+        <div class="project-links" style="border-top:none; padding-top:0; margin-top:0;">
+          <a href="#" class="proj-link demo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+            </svg>
+            Live Site
+          </a>
+          <a href="#" class="proj-link github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.82.57A12 12 0 0012 .3z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Watch Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 3: Construction App -->
+    <div class="case-study fade-in">
+      <div class="case-media">
+        <div class="case-media-placeholder">
+          <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="5" y="2" width="14" height="20" rx="2" />
+            <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2" />
+          </svg>
+          <p>Add screenshot here</p> -->
+          <img src="rio.png" alt="Rio_Livings">
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-num">Case Study 03</div>
+        <div class="case-title">Construction Management App</div>
+        <div class="case-metrics">
+          <div>
+            <div class="case-metric-val">Live</div>
+            <div class="case-metric-label">On Play Store</div>
+          </div>
+          <div>
+            <div class="case-metric-val">RT</div>
+            <div class="case-metric-label">Camera streaming</div>
+          </div>
+        </div>
+        <div class="case-desc">A construction company needed field teams and managers to stay in sync in real time.
+          Built a React Native app from scratch with live camera streaming from job sites, budget tracking, activity
+          feeds, and gallery management. Handled end-to-end — from architecture to Play Store deployment.</div>
+        <div class="project-links" style="border-top:none; padding-top:0; margin-top:0;">
+          <a href="#" class="proj-link playstore">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3.18 23.76c.37.2.8.2 1.18 0L16.62 12 4.36.24C3.98.04 3.55.04 3.18.24A1.3 1.3 0 002.5 1.4v21.2c0 .52.28.98.68 1.16z" />
+              <path d="M20.3 9.93l-2.8-1.6-3.2 3.67 3.2 3.67 2.82-1.62A2.14 2.14 0 0020.3 9.93z" />
+            </svg>
+            Play Store
+          </a>
+          <a href="#" class="proj-link github">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.82.57A12 12 0 0012 .3z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Watch Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-tag fade-in">Where I've worked</div>
+    <h2 class="section-title fade-in">Experience</h2>
+    <p class="section-sub fade-in">From self-taught intern to CTO of a national engineering club — a track record built
+      from scratch.</p>
+
+    <div class="exp-list">
+
+      <div class="exp-item fade-in">
+        <div class="exp-period">2024 –<br>Present</div>
+        <div>
+          <div class="exp-role">Software Developer</div>
+          <div class="exp-company">Tata Consultancy Services (TCS)</div>
+          <div class="exp-desc">Part of the FCSO ECM team managing an enterprise case management platform. Responsible
+            for building and maintaining ETL batch processes that correlate financial risk events from multiple vendors
+            (AML, NS), generate actionable cases, and feed the investigator UI. Working extensively with PL/SQL and
+            enterprise-grade data pipelines.</div>
+        </div>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-period">2022 –<br>2024</div>
+        <div>
+          <div class="exp-role">Co-founder & Lead Developer</div>
+          <div class="exp-company">Nyon — Dev Studio</div>
+          <div class="exp-desc">Founded and ran a small software studio with a team of 5–6 members. Led architecture
+            decisions, client relationships, and end-to-end delivery across 8+ production projects. Built products
+            spanning mobile apps, SaaS platforms, IoT dashboards, and enterprise software — several reaching hundreds of
+            daily active users. Handled cloud deployment, payment integrations, and post-launch support independently.
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-period">2022 –<br>2023</div>
+        <div>
+          <div class="exp-role">CTO</div>
+          <div class="exp-company">IEEE & IEDC College Chapters</div>
+          <div class="exp-desc">Led technical initiatives for two prestigious engineering clubs simultaneously. Built
+            the college admission chatbot UI, developed websites for tech festivals, and mentored junior developers.
+            Managed end-to-end technical delivery for events with hundreds of participants.</div>
+        </div>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-period">2021 –<br>2022</div>
+        <div>
+          <div class="exp-role">Remote Web Developer Intern</div>
+          <div class="exp-company">Startup (Remote)</div>
+          <div class="exp-desc">Hired in second year of college. Started at ₹5k/month, grew to ₹15k/month over the year.
+            Implemented Figma designs into production-ready React frontends, deployed on AWS EC2 with Nginx reverse
+            proxy, migrated a Spring Boot backend to AWS Lambda microservices, and worked on Firebase function backends
+            for a mobile game.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-tag fade-in">Let's work together</div>
+    <h2 class="section-title fade-in">Open to<br>opportunities.</h2>
+    <p class="section-sub fade-in">Actively looking for full stack engineering roles, particularly in Germany. I bring
+      end-to-end ownership, real production experience, and the hunger to keep building.</p>
+
+    <div class="contact-wrap fade-in">
+      <div class="contact-line">
+        <div class="contact-label">Email</div>
+        <div class="contact-val"><a href="mailto:jazzir@email.com">jazzir@email.com</a></div>
+      </div>
+      <div class="contact-line">
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-val"><a href="#">linkedin.com/in/jazzirhussain</a></div>
+      </div>
+      <div class="contact-line">
+        <div class="contact-label">GitHub</div>
+        <div class="contact-val"><a href="#">github.com/jazzirhussain</a></div>
+      </div>
+      <div class="contact-line">
+        <div class="contact-label">Location</div>
+        <div class="contact-val">India · Open to relocate to Germany 🇩🇪</div>
+      </div>
+      <div class="contact-line">
+        <div class="contact-label">Languages</div>
+        <div class="contact-val">English (fluent) · German (learning · A1)</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo"><span>J</span>azzir Hussain Hamsa</div>
+    <p>Built end to end. Just like everything else.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+
+</html>
