@@ -209,8 +209,8 @@ export const caseStudies = [
     desc: "A construction company needed field teams and managers to stay in sync in real time. Built a React Native app from scratch with live camera streaming from job sites, budget tracking, activity feeds, and gallery management. Handled end-to-end — from architecture to Play Store deployment.",
     img: "rio.png",
     links: {
-      playstore: "#",
-      github: "#",
+      playstore: "https://play.google.com/store/apps/details?id=com.riolivings.app.twa&pcampaignid=web_share",
+      github: "https://github.com/jazzirHussain/Construction-Management-App",
       video: "#"
     }
   }
