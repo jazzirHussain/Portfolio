@@ -130,7 +130,7 @@ export const projects = [
     ],
     stack: ["MQTT", "AWS EC2", "CloudFront", "Time-series DB"],
     links: {
-      github: "#",
+      github: "https://github.com/jazzirHussain/IoT-Analytics-Dashboard",
       video: "#"
     }
   },
