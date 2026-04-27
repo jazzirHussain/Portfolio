@@ -146,7 +146,7 @@ export const projects = [
     ],
     stack: ["React", "Govt API", "Node.js", "PDF"],
     links: {
-      github: "#",
+      github: "https://github.com/jazzirHussain/Billing-Automation-Software",
       video: "#"
     }
   },
