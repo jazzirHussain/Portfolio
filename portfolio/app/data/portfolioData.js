@@ -112,7 +112,8 @@ export const projects = [
     stack: ["React", "Node.js", "RFID", "PostgreSQL"],
     featured: true,
     links: {
-      github: "#",
+      github: "https://github.com/SophiseTech/Aethens_Dashboard_Frontend.git",
+      github: "https://github.com/SophiseTech/Aethens_Dashboard_Backend.git",
       video: "#"
     }
   },
