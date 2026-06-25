@@ -74,7 +74,7 @@ export const projects = [
     links: {
       playstore: "https://play.google.com/store/apps/details?id=com.riolivings.app.twa&pcampaignid=web_share",
       github: "https://github.com/jazzirHussain/Construction-Management-App",
-      video: "#"
+      // video: "#"
     }
   },
   {
@@ -94,7 +94,7 @@ export const projects = [
     links: {
       demo: "https://ghcvaluation.vercel.app/",
       github: "https://github.com/jazzirHussain/AI-Business-Valuation-Product",
-      video: "#"
+      video: "https://youtu.be/xy8X2IC1rzY"
     }
   },
   {
@@ -114,7 +114,8 @@ export const projects = [
     links: {
       github: "https://github.com/SophiseTech/Aethens_Dashboard_Frontend.git",
       github: "https://github.com/SophiseTech/Aethens_Dashboard_Backend.git",
-      video: "#"
+      video: "https://youtu.be/6l34P2WG_0Y",
+      demo: "https://app.schoolofathens.art/"
     }
   },
   {
@@ -131,7 +132,8 @@ export const projects = [
     stack: ["MQTT", "AWS EC2", "CloudFront", "Time-series DB"],
     links: {
       github: "https://github.com/jazzirHussain/IoT-Analytics-Dashboard",
-      video: "#"
+      video: "https://youtu.be/k2dGewlUT7U",
+      demo: "https://io.abhram.com/login"
     }
   },
   {
@@ -147,7 +149,7 @@ export const projects = [
     stack: ["React", "Govt API", "Node.js", "PDF"],
     links: {
       github: "https://github.com/jazzirHussain/Billing-Automation-Software",
-      video: "#"
+      demo: "https://swiftgst.vercel.app/"
     }
   },
   {
@@ -163,7 +165,6 @@ export const projects = [
     stack: ["React", "Node.js", "Razorpay", "MongoDB"],
     links: {
       github: "https://github.com/jazzirHussain/E-Commerce-Platform",
-      video: "#"
     }
   }
 ];
@@ -179,8 +180,10 @@ export const caseStudies = [
     desc: "A school needed to manage students, staff, attendance, payroll, and project submissions across multiple branches — all in one platform. The hard part was the RFID attendance system and the complex slot-booking engine that handles rescheduling across branches and roles without conflicts.",
     img: "athens.png",
     links: {
-      github: "#",
-      video: "#"
+      github: "https://github.com/SophiseTech/Aethens_Dashboard_Frontend.git",
+      github: "https://github.com/SophiseTech/Aethens_Dashboard_Backend.git",
+      video: "https://youtu.be/6l34P2WG_0Y",
+      demo: "https://app.schoolofathens.art/"
     }
   },
   {
@@ -194,9 +197,9 @@ export const caseStudies = [
     img: "ghc.png",
     reverse: true,
     links: {
-      demo: "#",
-      github: "#",
-      video: "#"
+      github: "https://github.com/jazzirHussain/AI-Business-Valuation-Product",
+      video: "https://youtu.be/xy8X2IC1rzY",
+      demo: "https://ghcvaluation.vercel.app/"
     }
   },
   {
@@ -211,7 +214,6 @@ export const caseStudies = [
     links: {
       playstore: "https://play.google.com/store/apps/details?id=com.riolivings.app.twa&pcampaignid=web_share",
       github: "https://github.com/jazzirHussain/Construction-Management-App",
-      video: "#"
     }
   }
 ];
@@ -244,9 +246,9 @@ export const experience = [
 ];
 
 export const contactInfo = [
-  { label: "Email", val: "jazzir@email.com", href: "mailto:jazzir@email.com" },
-  { label: "LinkedIn", val: "linkedin.com/in/jazzirhussain", href: "#" },
-  { label: "GitHub", val: "github.com/jazzirhussain", href: "#" },
-  { label: "Location", val: "India · Open to relocate to Germany 🇩🇪" },
+  { label: "Email", val: "jasirhussain2002@email.com", href: "mailto:jasirhussain2002@email.com" },
+  { label: "LinkedIn", val: "linkedin/jazzirHussain", href: "https://www.linkedin.com/in/jazzir-hussain-7a6b151ab/" },
+  { label: "GitHub", val: "github/jazzirHussain", href: "https://github.com/jazzirHussain" },
+  { label: "Location", val: "Bangalore, India · Open to relocate to Germany 🇩🇪" },
   { label: "Languages", val: "English (fluent) · German (learning · A1)" }
 ];

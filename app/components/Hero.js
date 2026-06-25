@@ -13,7 +13,7 @@ export default function Hero() {
       <p className="hero-sub">
         I build things that actually ship — from <strong>figma to production</strong>, from <strong>frontend to cloud
           infra</strong>. Self-taught engineer who co-founded a dev studio, led a team of 5, and shipped products with
-        <strong>600+ daily active users</strong>.
+        <strong> 600+ daily active users</strong>.
       </p>
       <div className="hero-cta">
         <a href="#projects" className="btn-primary">View Projects →</a>

@@ -22,7 +22,7 @@ export default function Navbar() {
         </li>
         <li>
           <a
-            href="Jazzir_Hussain_Resume_Bangalore.pdf"
+            href="Jazzir_Hussain_Bangalore.pdf"
             target="_blank"
             className="btn-primary"
           >
